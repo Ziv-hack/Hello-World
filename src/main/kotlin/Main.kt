@@ -4,17 +4,16 @@ package org.example
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
 
+    var i = 0
     while(true)
     {
-        val name : String?
-        print("Please enter your name: ")
-        name = readlnOrNull()
-        if(name != null)
+        print("Please enter client name:    ")
+        getNameRequest.name = readlnOrNull()
+        if(getNameRequest.printNameRequest(i))
         {
-            println("The name of client is: $name")
+            i++
         }
         else{
-            println("Name not found")
             break
         }
 
